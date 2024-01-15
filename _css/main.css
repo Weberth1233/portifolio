@@ -1,0 +1,225 @@
+body{
+   background-color: #13131F;
+   color: #FFF; 
+   font-family: 'Raleway';
+   height: 100vh;
+}
+
+body.loaded .knowledge {
+    opacity: 1;
+}
+
+section.knowledge{
+    opacity: 0; /* Inicia a seção com opacidade 0 */
+    transition: opacity 1s ease; /* Adiciona uma transição suave */
+}
+
+/* Normalize.css */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header{
+    display: flex;
+    justify-content:space-around;
+    height: 112px;
+    align-items: center;
+    margin-right: 9px;
+    margin-left: 9px;
+}
+div.line{
+    width: 100%;
+    background-color: #203D5E;
+    height: 0.1vh;
+}
+div.content{
+    max-width: 920px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+div.content .home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+div.content .circle-image {
+    width: 20vw; /* Utiliza 18% da largura da viewport (tela) */
+    max-width: 450px; /* Define um tamanho máximo */
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin-right: 25px;
+}
+
+div.content .circle-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; 
+
+}
+
+
+/* section.about-me p{
+    font-size: 14pt;
+    font-weight: 600;
+    text-align: center;
+    color: #828282 ;
+    line-height: 2.0rem;
+} */
+
+section.area-info .cards-info{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    align-items: center;/* Define o layout das colunas */
+    gap: 16px; 
+    white-space: nowrap; 
+}
+section.area-info .cards-info .card{
+    height: 150px;
+    background-color:#1D1832;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+}
+section.area-info .cards-info .card .title{
+   font-size: 18pt;
+   font-weight: bold;
+}
+
+div.content .button-home button{
+    width: 302px;
+    max-width: 220px;
+    background-color:#1D1832;
+    padding: 16px;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-right: 25px; 
+}
+
+div.content .button-home button:hover{
+    background-color: #13131F;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+div.content .button-home button .button-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.project .area-project{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+section.project .cards .card{
+    max-width: 400px;
+    height: 140px;
+    background-color: #FFF;
+    margin-bottom: 30px;
+    padding: 16px;
+    border-radius: 10px;
+    color: #13131F;
+}
+section.project .cards .card .header-card{
+    display: flex;
+    justify-content: space-between;
+}
+section.project .cards .card .header-card p.title-card{
+    font-size: 18pt;
+    color: #203D5E;
+    font-weight: bold;
+}
+section.project .cards .card .content-card{
+    font-size: 12pt;
+    color:#828282;
+}
+.outer-container {
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal quando necessário */
+}
+.cards{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Define o layout das colunas */
+    gap: 16px; 
+    white-space: nowrap; /* Impede a quebra de linha do conteúdo */
+}
+.cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1D1832;
+    padding: 50px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cards .card:hover{
+    background-color: #13131F;
+    border: 1px solid #fff;
+}
+
+section.contact .cards-contact .card p{
+    font-size: 18pt;
+}
+h1.title{
+    font-size: 25pt;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav#menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav#menu ul li{
+    margin-right: 16px;
+}
+
+.typing-text {
+    font-size: 3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #333;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+  }
+
+@media (max-width: 600px) {
+    div.content .circle-image{
+        width: 50vw; 
+    }
+    div.content .home-content{
+        text-align: center;
+    }
+    .typing-text {
+        font-size: 25px;
+        text-align: center;
+    }
+}
